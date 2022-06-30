@@ -1,10 +1,9 @@
 import { Router } from "express";
-import passport from "passport";
-import AuthController from "../app/controllers/http/AuthController";
-import PostsController from "../app/controllers/http/PostsController";
-import PostsController from "../app/controllers/http/PostsController";
-import UsersController from "../app/controllers/http/UsersController";
-import auth from "../app/middlewares/auth";
+import AuthController from "../../app/controllers/http/AuthController";
+import PostsController from "../../app/controllers/http/PostsController";
+import PostsController from "../../app/controllers/http/PostsController";
+import UsersController from "../../app/controllers/http/UsersController";
+import auth from "../../app/middlewares/auth";
 
 const routes = Router();
 

@@ -1,7 +1,7 @@
 import express from "express";
-import web from "./routes/web";
-import api from "./routes/api";
-import MongoProvider from "./providers/MongoProvider";
+import web from "../routes/web";
+import api from "../routes/api";
+import MongoProvider from "../../providers/MongoProvider";
 import { engine } from "express-handlebars";
 import path from "path";
 import { allowInsecurePrototypeAccess } from "@handlebars/allow-prototype-access";
@@ -10,13 +10,13 @@ import Handlebars from "handlebars";
 import methodOverride from "method-override";
 import cookieParser from "cookie-parser";
 import session from "express-session";
-import sessionConfig from "./config/session";
+import sessionConfig from "../../config/session";
 import passport from "passport";
-import PassportProvider from "./providers/PassportProvider";
+import PassportProvider from "../../providers/PassportProvider";
 
 class App {
-  viewsPath = path.resolve(__dirname, "resources", "views");
-  publicPath = path.resolve(__dirname, "public");
+  viewsPath = path.resolve(__dirname, "..", "..", "resources", "views");
+  publicPath = path.resolve(__dirname, "..", "..", "public");
 
   constructor() {
     this.randomNumber = Math.random();
