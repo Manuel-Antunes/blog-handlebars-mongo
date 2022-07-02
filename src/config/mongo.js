@@ -1,3 +1,3 @@
 export default {
-  uri: "mongodb://localhost:27017/test",
+  uri: process.env.MONGODB_URL,
 }
